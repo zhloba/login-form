@@ -6,14 +6,17 @@ function signIn() {
         type: 'GET',
         url: host,
         async: true,
-        crossDomain: true
+        crossDomain: true,
+        xhrFields: {
+            withCredentials: true
+        },
         //,
         //data: JSON.stringify(d),
-        //dataType: "json",
-        // headers: {
-        //     'Content-Type': 'application/json',
-        //     'Accept': 'application/json'
-        // }
+        dataType: "json",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
     })
     .done(function (data) {        
         showAlert(data);
