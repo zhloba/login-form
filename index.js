@@ -6,6 +6,7 @@ function signIn() {
         type: 'GET',
         url: host,
         async: true,
+        crossDomain: true,
         //data: JSON.stringify(d),
         //dataType: "json",
         headers: {
