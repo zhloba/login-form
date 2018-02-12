@@ -9,14 +9,8 @@ function signIn() {
         crossDomain: true,
         xhrFields: {
             withCredentials: true
-        }
-        //,
-        //data: JSON.stringify(d),
-        // dataType: "json",
-        // headers: {
-        //     'Content-Type': 'application/json',
-        //     'Accept': 'application/json'
-        // }
+        },        
+        dataType: "json"
     })
     .done(function (data) {        
         showAlert(data);
