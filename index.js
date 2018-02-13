@@ -13,7 +13,7 @@ function signIn() {
         dataType: "json",
         data: JSON.stringify(
             {
-                login: $("#inputEmail").val(),
+                username: $("#inputEmail").val(),
                 password: $("#inputPassword").val()
             }
         ),
@@ -23,10 +23,10 @@ function signIn() {
         }
     })
     .done(function (data) {        
-        showAlert(data);
+        showAlert(data.errorCode);
     })
     .fail(function (error) {       
-        showAlert(error);
+        showAlert(error.errorCode);
     });
 };
 
