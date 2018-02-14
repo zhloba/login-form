@@ -11,11 +11,7 @@ function signIn() {
             withCredentials: true
         },        
         dataType: "json",
-        data: { username: $("#inputEmail").val(), password: $("#inputPassword").val() },
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
+        data: { username: $("#inputEmail").val(), password: $("#inputPassword").val() }       
     })
     .done(function (data) {        
         showAlert(data.errorCode);
