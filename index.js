@@ -11,7 +11,8 @@ function signIn() {
             withCredentials: true
         },        
         dataType: "json",
-        data: { username: $("#inputEmail").val(), password: $("#inputPassword").val() }       
+        contentType: 'application/json; charset=utf-8', //'application/x-www-form-urlencoded; charset=utf-8'
+        data: JSON.stringify({ username: $("#inputEmail").val(), password: $("#inputPassword").val() })
     })
     .done(function (data) {        
         showAlert(data.errorCode);
