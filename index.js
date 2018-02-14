@@ -11,12 +11,7 @@ function signIn() {
             withCredentials: true
         },        
         dataType: "json",
-        data: JSON.stringify(
-            {
-                username: $("#inputEmail").val(),
-                password: $("#inputPassword").val()
-            }
-        ),
+        data: { username: $("#inputEmail").val(), password: $("#inputPassword").val() },
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
